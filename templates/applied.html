@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied</title>
+</head>
+<body>
+    <h1>Jobs You Applied For</h1>
+    <div class="center">
+        <div class="property-card">
+          <a href="#">
+            <div class="property-image">
+              <div class="property-image-title">
+                <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+              </div>
+            </div></a>
+          <div class="property-description">
+            <h5> Card Title</h5>
+            <p>Company Name: {{session['cname']}}</p>
+            <p>Position: {{session['position']}}</p>
+            
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+              <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+            </div>
+          </a>
+        </div>
+      </div>
+</body>
+</html>
