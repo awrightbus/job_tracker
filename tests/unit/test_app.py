@@ -11,6 +11,6 @@ def test_index_page():
     with app.test_client() as client:
         responce = client.get('/')
         assert responce.status_code == 200
-        assert b'Home Page' in responce.data
+        assert b'Job Tracker' in responce.data
 
 

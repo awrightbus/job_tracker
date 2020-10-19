@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename='css/jobs.css')}}>
     <title>Applied</title>
 </head>
 <body>
-    <h1>Jobs You Applied For</h1>
+    <h1>Hi {{name}}, here are the jobs you applied for</h1>
+    
     <div class="center">
+      {% for card in cards %}
         <div class="property-card">
           <a href="#">
             <div class="property-image">
@@ -15,18 +18,35 @@
                 <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
               </div>
             </div></a>
-          <div class="property-description">
-            <h5> Card Title</h5>
-            <p>Company Name: {{session['cname']}}</p>
+          <!-- <div class="property-description"> -->
+
+            <!-- <h5> Company: {{session['cname']}}</h5>
             <p>Position: {{session['position']}}</p>
-            
-          </div>
-          <a href="#">
-            <div class="property-social-icons">
-              <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+            <p>Follow Up: {{session['followUp']}}</p>
+            <p>Application Date:{{session['appliedDate']}}</p>  -->
+          
+           <!-- </div> -->
+           
+           
+             <div class="property-description"></div>
+                <h1>Company Name:{{card}}</h1>
+                <p>Position: {{card}}</p>
+                <p>Follow Up{{card}}</p>
+                <p>Date applied: {{card}}</p>
             </div>
-          </a>
+              
+    
+             
+        
         </div>
+        {%endfor%}
+       
       </div>
+      <div class='center'>
+        
+           
+        <a class="pure-button pure-button-primary" type='submit' href='/addjob'>Add job</a>
+      </div>
+      
 </body>
 </html>
