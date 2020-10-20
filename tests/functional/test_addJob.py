@@ -37,3 +37,6 @@ def test_post_addJob_page():
 
         assert responce.status_code == 200
         assert b'apple' in responce.data
+
+
+
